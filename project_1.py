@@ -19,7 +19,21 @@ while True:
     print("Choose Your Option >>>")
     print("1 = 🪨stone\n2 = 📄paper\n3 = ✂️SCISSORS")
 
-    user = int(input("Please Choose One Option :"))
+    # user = int(input("Please Choose One Option :"))
+    # computer = random.randint(1, 3)
+    try:
+        user = int(input("Please Choose One Option : "))
+    except ValueError:
+        print("❌ Invalid input! Please enter a number.")
+        continue
+
+    if user == 5:
+        break
+
+    if user not in [1, 2, 3]:
+        print("❌ Invalid choice! Please select 1, 2, 3 or 5.")
+        continue
+
     computer = random.randint(1, 3)
     
 
